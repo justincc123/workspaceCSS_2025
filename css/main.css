@@ -1,0 +1,22 @@
+/* 00 css variables */
+:root {
+    --body-color: hsla(235, 91%, 73%, 0.853);
+    --page-color: hsla(0, 0%, 90%, 0.861);
+    --sidebar-color: hsla(0, 93%, 16%, 0.767);
+    --h1-color: hsla(0, 0%, 0%, 0.767);
+}
+
+/* 01 color */
+body {
+    background-color: var(--body-color);
+}
+#zen-intro {
+    background-color: var(--page-color);
+}
+.sidebar {
+    background-color: var(--sidebar-color);
+}
+/* try h1 */
+h1 {
+    color: var(--h1-color);
+}
