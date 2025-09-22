@@ -20,3 +20,11 @@ body {
 h1 {
     color: var(--h1-color);
 }
+
+
+/* 02 layout */
+div.explanation, div.requirements, div.benefits, div.participation {
+    position: fixed;
+    width: var(--page-width);
+    top: var(--page-top);
+}
