@@ -4,6 +4,9 @@
     --page-color: hsla(0, 0%, 90%, 0.861);
     --sidebar-color: hsla(0, 93%, 16%, 0.767);
     --h1-color: hsla(0, 0%, 0%, 0.767);
+    --page-width: 30%;
+    --page-top: 85vh;
+    --bottom-bar-height: 15vh;
 }
 
 /* 01 color */
@@ -27,4 +30,55 @@ div.explanation, div.requirements, div.benefits, div.participation {
     position: fixed;
     width: var(--page-width);
     top: var(--page-top);
+    /*add background image*/
+}
+div.explanation {
+    left: 1vw;
+}
+div.requirements {
+    left: 11vw;
+}
+div.benefits {
+    left: 22vw;
+}
+div.participation {
+    left: 33vw;
+}
+/* do the rest */
+
+/* side bar */
+aside.sidebar {
+    position: absolute;
+    top: 17%;
+    right: 0%;
+    bottom: 0;
+
+    /*adjust w and h*/
+    width: 20%;
+}
+
+/* extra 1-4 decoration boxes */
+div.extra2 {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 10%;
+    background-color: burlywood;
+}
+div.extra1 {
+    position: fixed;
+    left: 17%;
+    width: 40;
+    height: 55vh;
+    background-image: url(../img/newspaper2.jpg);
+    z-index: -1;
+}
+section.intro {
+    position: fixed;
+    left: 17%;
+    height: 55vh;
+    width: 40;
+    background-image: url(../img/newspaper2.jpg);
+
 }
