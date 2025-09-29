@@ -156,3 +156,22 @@ p::first-letter {
     font-size: 1.5em;
     text-transform: uppercase;
 }
+p:nth-child(2n+1){
+    background-color: chartreuse;
+}
+/*try text shadow*/
+h3 {
+    text-shadow: 2px 2px 5px lightgrey;
+}
+div{
+    box-shadow: 2px 2px 5px lightgrey;
+}
+div.explanation, div.requirements, h3, div.benefits, div.participation, h3 {
+    border-radius: 20px;
+    border-top: solid red 2px;
+    padding-left: 5px;
+
+}
+ul {
+    list-style-image: url(../img/star.png);
+}
