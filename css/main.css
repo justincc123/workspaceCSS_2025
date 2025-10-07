@@ -1,4 +1,4 @@
-/* Style file created by yilian 
+/* 
  ========================================
  00: css variable
  01: color
@@ -9,9 +9,9 @@
  ======================================
 */
 
-/** 00 css variable */
-:root{
-    --body-color: hsla(359, 39%, 35%, 0.8);
+/** 00 **/
+:root {
+    --body-color: hsla(358, 25%, 50%, 0.8);
     --page-color: hsla(30, 32%, 88%, 0.9);
     --sidebar-color: rgb(191, 164, 99);
     --page-width: 30%;
@@ -19,7 +19,7 @@
     --bottom-bar-height: 15vh;
 }
 
-/** 01 color */
+/** 01 **/
 body {
     background-color: var(--body-color);
 }
@@ -32,162 +32,231 @@ body {
     background-color: var(--sidebar-color);
 }
 
-/** 02 Layout **/
-/* four bottom tabs */
+/** 02 **/
 div.explanation,
 div.requirements,
 div.benefits,
 div.participation {
-   position: fixed;
-   width: var(--page-width);
-   top: var(--page-top);
-   /* add the background image to the page if needed */
+    position: fixed;
+    width: var(--page-width);
+    top: var(--page-top);
 }
 
-div.explanation { left: 1%; }
-div.requirements { left: 18%; }
-div.benefits { left: 35%; }
-div.participation { left: 52%; }
+div.explanation {
+    left: 1%;
+}
 
-/* sidebar */
+div.requirements {
+    left: 18%;
+}
+
+div.benefits {
+    left: 35%;
+}
+
+div.participation {
+    left: 52%;
+}
+
 .sidebar {
-   position: absolute;
-   top: 20%;
-   right: 0;
-   bottom: 0;
-   width: 20%;
+    position: absolute;
+    top: 20%;
+    right: 0;
+    bottom: 0;
+    width: 20%;
 }
 
-/* extra1-2 decoration blocks */
 div.extra2 {
-   position: fixed;
-   left: 0;
-   bottom: 0;
-   right: 0;
-   height: var(--bottom-bar-height);
-   background-color: burlywood;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: var(--bottom-bar-height);
+    background-color: rgb(229, 214, 194);
 }
 
 div.extra1 {
-   position: fixed;
-   top: 10vh;
-   left: 20%;
-   width: 30%;
-   height: 80%;
-   background-image: url(../img/newspaper2.jpg);
-   z-index: -1;
-   transform: rotate(30deg);
+    position: fixed;
+    top: 10vh;
+    left: 20%;
+    width: 30%;
+    height: 80%;
+    background-image: url(../img/newspaper2.jpg);
+    z-index: -1;
+    transform: rotate(30deg);
 }
 
-/* Finish the introduction layout */
 section.intro {
-   position: fixed;
-   top: 10vh;
-   left: 20%;
-   width: 30%;
-   height: 80vh;
-   padding: 1%;
-   background-image: url(../img/newspaper3.jpg);
-   background-size: cover;
-   background-repeat: no-repeat;
+    position: fixed;
+    top: 10vh;
+    left: 20%;
+    width: 30%;
+    height: 80vh;
+    padding: 1%;
+    background-image: url(../img/newspaper3.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
-/* file tab labels */
+div.explanation,
+div.requirements,
+h3,
+div.benefits,
+div.participation,
+h3 {
+    border-radius: 20px;
+    border-top: solid rgb(0, 26, 255) 2px;
+    padding-left: 5px;
+}
+
 div.explanation h3,
 div.requirements h3,
 div.benefits h3,
 div.participation h3 {
-   margin-top: -10%;
-   padding-left: 10px;
-   width: 100px;
-   border: 3px dashed black;
-   background-color: burlywood;
+    margin-top: -10%;
+    padding-left: 10px;
+    width: 100px;
+    border: 3px dashed black;
+    background-color: burlywood;
 }
 
-/** 03 Typography **/
-@font-face{
-   font-family: 'myfont';
-   src: url(../fonts/chunkfive.eot);
+/** 03 **/
+@font-face {
+    font-family: 'myfont';
+    src: url(../fonts/chunkfive.eot);
 }
 
 header h1 {
-   font-family: 'myfont', sans-serif;
-   font-weight: 100;
-   font-size: 1.25em;
-   letter-spacing: normal;
-   line-height: 1em;
-   text-transform: uppercase;
+    font-family: 'myfont', sans-serif;
+    font-weight: 100;
+    font-size: 1.25em;
+    text-transform: uppercase;
 }
 
 header h2 {
-   /* using Google web font from Ranchers */
-   font-family: 'Ranchers', cursive;
-   font-size: 1.1em;
-   text-indent: 10px;
-   letter-spacing: 0.05em;
+    font-family: 'Ranchers', cursive;
+    font-size: 1.1em;
+    text-indent: 10px;
+    letter-spacing: 0.05em;
+    background-image: linear-gradient(0deg, rgb(20, 90, 61), rgb(137, 17, 146), blue);
+    animation: 3s infinite running changeColor;
 }
 
-a { text-decoration: none; }
-li { list-style-type: none; }
-
-#design-selection h3 {
-   visibility: hidden;
-   /* display: none; */
+a {
+    text-decoration: none;
 }
 
-/* hide archives and resources */
-#design-archives, 
-#zen-resources {
-   display: none;
+li {
+    list-style-type: none;
 }
 
-/** 04 Transition, Animation, Selector Practice **/
-a:hover {
-    font-size: 1.5em;
-}
-h3:hover {
-    color: brown;
-}
-div.explanation:active {
-    top: 15vh;
-    height: 90vh;
-}
-p::first-letter {
-    font-size: 1.5em;
-    text-transform: uppercase;
-}
-p:nth-child(2n+1){
-    background-color: chartreuse;
-}
-/*try text shadow*/
-h3 {
-    text-shadow: 2px 2px 5px lightgrey;
-}
-div{
-    box-shadow: 2px 2px 5px lightgrey;
-}
-div.explanation, div.requirements, h3, div.benefits, div.participation, h3 {
-    border-radius: 20px;
-    border-top: solid red 2px;
-    padding-left: 5px;
-
-}
 ul {
     list-style-image: url(../img/star.png);
 }
 
-/**transition transform**/
-section.intro h3  ~p {
+#design-selection h3 {
+    visibility: hidden;
+}
+
+#design-archives,
+#zen-resources {
+    display: none;
+}
+
+/** 04 **/
+a:hover {
+    font-size: 1.5em;
+    transition: all 0.3s ease-in-out;
+}
+
+h3:hover {
+    color: brown;
+    text-shadow: 2px 2px 5px lightgrey;
+}
+
+div.explanation:active,
+div.requirements:active,
+div.benefits:active,
+div.participation:active {
+    top: 15vh;
+    height: 90vh;
+}
+
+p::first-letter {
+    font-size: 1.5em;
+    text-transform: uppercase;
+}
+
+p:nth-child(2n) {
+    background-color: lightblue;
+}
+
+p:nth-child(2n+1) {
+    background-color: chartreuse;
+}
+
+div {
+    box-shadow: 2px 2px 5px lightgrey;
+}
+
+section.intro h3~p {
     text-transform: capitalize;
     opacity: 1;
     transition: transform 3s ease-in-out;
 }
 
-section.intro h3:hover ~p{
+section.intro h3:hover~p {
     opacity: 0;
-    transform: scale(0.5)
+    transform: scale(0.5);
 }
-h2 {
-    background-image: linear-gradient(0deg,red,yellow,blue);
-    animation: 1s infinite running changeColor;
+
+@keyframes changeColor {
+    from {
+        background-image: linear-gradient(90deg, rgb(33, 224, 8), rgb(218, 218, 142), rgb(219, 28, 28));
+    }
+
+    50% {
+        background-image: linear-gradient(180deg, rgb(26, 41, 156), rgb(10, 159, 228), rgb(194, 194, 250));
+    }
+
+    to {
+        background-image: linear-gradient(270deg, rgb(187, 20, 206), rgb(255, 0, 149), rgb(215, 237, 16));
+    }
+}
+
+footer {
+    position: fixed;
+    bottom: 1vh;
+    text-align: center;
+    width: 100%;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 10px;
+    animation: backandforth 5s infinite alternate ease-in-out;
+}
+
+@keyframes backandforth {
+    0% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(20px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/** 05 **/
+aside.sidebar {
+    clip-path: polygon(0 0, 0 60%, 50% 100%, 90% 60%, 90% 0);
+}
+
+.extra3,
+.extra4,
+.extra5,
+.extra6 {
+    display: none;
 }
